@@ -45,11 +45,15 @@ if __name__ == "__main__":
             assert path.is_relative_to(ROOT) and path.is_file(), ref
         if url.fragment:
             assert url.fragment in parser.ids, ref
-    assert len(set(parser.downloads)) == 6, "Expected six downloadable documents"
+    assert len(set(parser.downloads)) == 5, "Expected five downloadable documents"
     for ref in set(parser.downloads):
         assert (ROOT / ref).read_bytes().startswith(b"%PDF-"), ref
+    assert "park-wooyoung-career.pdf" not in source
+    assert "인프런" in source
+    assert source.count('class="case-gallery"') == 3
+    assert source.count('class="other-image"') == 6
     assert all(image.get("alt") for image in parser.images), "Missing image descriptions"
     assert 'lang="ko"' in source and 'name="viewport"' in source
     assert not any(value in source for value in ("TODO", "Lorem ipsum", 'href="#"'))
     assert (ROOT / ".nojekyll").is_file()
-    print(f"PASS: {len(parser.ids)} anchors, {len(parser.images)} images, 6 PDFs, all local links.")
+    print(f"PASS: {len(parser.ids)} anchors, {len(parser.images)} images, 5 PDFs, all local links.")
