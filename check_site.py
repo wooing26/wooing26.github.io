@@ -51,7 +51,11 @@ if __name__ == "__main__":
     assert "park-wooyoung-career.pdf" not in source
     assert "인프런" in source
     assert source.count('class="case-gallery"') == 3
-    assert source.count('class="other-image"') == 6
+    assert source.count('class="preview-card"') == 6
+    assert source.count('<template id="gallery-') == 9
+    assert 'class="other-image"' not in source
+    downloads = source.split('<section class="downloads-section"', 1)[1].split("</section>", 1)[0]
+    assert "<img" not in downloads
     assert all(image.get("alt") for image in parser.images), "Missing image descriptions"
     assert 'lang="ko"' in source and 'name="viewport"' in source
     assert not any(value in source for value in ("TODO", "Lorem ipsum", 'href="#"'))
