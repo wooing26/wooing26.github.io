@@ -31,8 +31,8 @@ if __name__ == "__main__":
     parser = SiteParser()
     source = (ROOT / "index.html").read_text(encoding="utf-8")
     parser.feed(source)
-    featured = source.split('<div class="project-grid">', 1)[1].split('<p class="section-note">', 1)[0]
-    assert re.findall(r"<h3>(.*?)</h3>", featured) == ["Billiards 3 Ball", "Project T", "Fighter Tap"]
+    assert 'class="project-grid"' not in source
+    assert re.findall(r'<article class="case" id="([^"]+)">', source) == ["billiards-detail", "project-t-detail", "fighter-detail"]
     assert all(anchor in parser.ids for anchor in ("billiards-detail", "project-t-detail", "fighter-detail"))
     assert len(parser.ids) == len(set(parser.ids)), "Duplicate IDs"
     for ref in parser.refs:
