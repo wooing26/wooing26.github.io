@@ -59,5 +59,10 @@ if __name__ == "__main__":
     assert all(image.get("alt") for image in parser.images), "Missing image descriptions"
     assert 'lang="ko"' in source and 'name="viewport"' in source
     assert not any(value in source for value in ("TODO", "Lorem ipsum", 'href="#"'))
+    css = (ROOT / "style.css").read_text(encoding="utf-8")
+    assert "backdrop-filter" not in css, "Full-screen filter regression"
+    previews = [image for image in parser.images if "/previews/" in image["src"]]
+    assert len(previews) == 15
+    assert all(int(image["width"]) <= 640 and int(image["height"]) <= 560 for image in previews)
     assert (ROOT / ".nojekyll").is_file()
     print(f"PASS: {len(parser.ids)} anchors, {len(parser.images)} images, 5 PDFs, all local links.")
