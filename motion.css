@@ -172,6 +172,15 @@ nav a[aria-current]::after{content:'';position:absolute;bottom:-7px;left:0;right
 .download-card{position:relative;min-width:0}
 .download-card::before{content:'↓';position:absolute;top:20px;right:22px;color:#718257;font:22px var(--mono)}
 .file-type{padding-right:22px}
+.downloads-section:focus{outline:none}
+.download-card .document-label{display:block;margin-top:24px;color:#596547;font:500 11px/1.8 var(--font);letter-spacing:.02em}
+.document-projects{display:flex;flex-wrap:wrap;align-content:start;gap:7px;list-style:none;padding:0;margin:10px 0 0}
+.document-projects li{padding:5px 9px;border:1px solid #c3cdb0;background:#e7ecdd;color:#37462a;font-size:11px;line-height:1.65}
+.featured .document-projects li{background:#c9df99;border-color:#a1ba72}
+.downloads-section .download-card{padding:28px;min-height:370px}
+.downloads-section .download-card p{font-size:12px;line-height:1.95}
+.downloads-section .individual-downloads .download-card{min-height:300px}
+@media(max-width:600px){.downloads-section .download-card{padding:25px;min-height:340px}.document-projects li{font-size:11px}.downloads-section .individual-downloads .download-card{min-height:300px}}
 .download-card b{transition:transform .25s}
 .download-card:hover b{transform:translateY(4px)}
 .contact{position:relative;isolation:isolate;overflow:hidden}
