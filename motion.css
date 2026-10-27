@@ -16,6 +16,43 @@ nav a[aria-current]::after{content:'';position:absolute;bottom:-7px;left:0;right
 .hero-signature a{padding-block:4px;border-bottom:1px solid #505d40;transition:color .2s}
 .hero-signature a:hover{color:var(--lime)}
 .hero-signature a>span{margin-left:10px;color:var(--lime)}
+
+/* Background comes before the projects; education has its own readable cards. */
+.history-subheading{margin-bottom:26px}
+.history-subheading h3{margin-top:10px;font-size:24px;font-weight:500;letter-spacing:-.04em;line-height:1.6}
+.education-block{margin-bottom:64px}
+.education-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px}
+.school-card{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;min-height:490px;padding:38px;background:#dfe7c9;color:#28321f;border:1px solid #adbe8d}
+.school-label{display:flex;justify-content:space-between;gap:14px;align-items:center;font:11px/1.8 var(--mono);letter-spacing:.06em;color:#5c6b45}
+.school-label>span:last-child{font:12px var(--font);padding:5px 10px;border:1px solid #9aac7d}
+.school-symbol{position:absolute;z-index:-1;right:-14px;top:45px;font:italic 240px/1 Georgia,serif;color:#b9c79966;pointer-events:none}
+.school-card h4{font-size:36px;font-weight:600;line-height:1.5;letter-spacing:-.05em;margin-top:36px}
+.school-card h4>span{color:#4d6830}
+.school-description{margin-top:22px;color:#52613e;font-size:15px;line-height:1.95}
+.school-meta{margin-top:auto;padding-top:35px}
+.school-meta>p{font:15px/1.8 var(--mono);color:#52613e}
+.school-meta a{display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:12px;margin-top:19px;padding-top:18px;border-top:1px solid #adbc93}
+.school-meta a>span{font-size:21px}
+.school-meta a:hover{color:#597b2c}
+.school-meta a:focus-visible{outline-color:#344a21}
+.training-cards{display:grid;grid-template-columns:1fr;gap:16px}
+.training-card{padding:25px 29px;background:#232b1d;border:1px solid #4b5b3c}
+.training-meta{display:flex;justify-content:space-between;align-items:start;gap:12px;color:#bac5ab;font:11px/1.8 var(--mono)}
+.training-meta>span:first-child{color:var(--lime);font-family:var(--font)}
+.training-card h4{margin-top:12px;font-size:23px;font-weight:500;line-height:1.5;letter-spacing:-.035em}
+.training-card p{font-size:14px;line-height:1.9;color:#c4ccba;margin-top:8px}
+.training-topics{margin-top:12px;font:11px/1.8 var(--mono);color:#a4b28f}
+.career-heading{padding-top:12px}
+#experience .career{padding-block:38px}
+#experience .career-date{font-size:16px}
+#experience .career-content h3{font-size:27px}
+#experience .career-subtitle{font-size:15px}
+#experience .career ul{font-size:14px;line-height:2.1}
+#work .other-work{margin-top:58px}
+@media(max-width:1100px){.education-layout{grid-template-columns:1fr 1.15fr;gap:20px}.school-card{padding:30px}.school-card h4{font-size:32px}.training-card{padding:24px}.training-meta{flex-wrap:wrap;gap:4px 15px}.training-card h4{font-size:21px}.school-description{font-size:14px}}
+@media(max-width:800px){.education-layout{grid-template-columns:1fr}.school-card{min-height:380px;padding:32px}.school-card h4{margin-top:24px}.school-symbol{right:35px;top:25px;font-size:260px}.school-meta{padding-top:30px}.training-cards{gap:16px}.training-card{padding:27px 30px}.training-meta{justify-content:space-between}.education-block{margin-bottom:50px}}
+@media(max-width:600px){.history-subheading h3{font-size:21px}.history-subheading{margin-bottom:22px}.school-card{padding:28px 24px;min-height:390px}.school-card h4{font-size:31px}.school-label{font-size:9px}.school-label>span:last-child{font-size:11px}.school-description{font-size:14px}.school-meta>p{font-size:14px}.school-symbol{right:0;top:45px;font-size:240px}.training-card{padding:25px 22px}.training-card h4{font-size:21px}.training-card p{font-size:13px}.training-meta{font-size:10px;flex-direction:column;gap:5px}.training-topics{font-size:10px}.education-block{margin-bottom:45px}#experience .career{padding-block:30px}#experience .career-date{font-size:14px}#experience .career-content h3{font-size:24px}#experience .career-subtitle{font-size:14px}#experience .career ul{font-size:13px}}
+@media print{.education-layout{grid-template-columns:1fr 1fr}.school-card{min-height:0;background:#fff;border-color:#999}.school-card h4{font-size:22pt}.school-symbol{display:none}.school-description,.school-meta>p{color:#333}.training-card{background:#fff;border-color:#999;break-inside:avoid}.training-card h4{font-size:13pt}.training-card p,.training-meta,.training-topics{color:#333}.education-block{margin-bottom:20pt}.education-layout,.career{break-inside:avoid}}
 .hero-edition{display:flex;gap:28px;align-items:center;color:#98a289;font:9px var(--mono);letter-spacing:.05em;margin-top:30px}
 .hero-edition span{border-left:1px solid var(--line);padding-left:20px}
 .hero h1{font-size:clamp(35px,3.65vw,58px);font-weight:800;line-height:1.34;letter-spacing:-.065em;margin:20px 0 28px}
@@ -127,6 +164,7 @@ nav a[aria-current]::after{content:'';position:absolute;bottom:-7px;left:0;right
 .other-grid h3{font-size:26px}
 .other-grid p{font-size:12px;line-height:2}
 .about{gap:90px}
+.about .about-intro{display:block}
 .education{display:grid;grid-template-columns:1fr 1fr;gap:15px}
 .education>span{grid-column:1/-1}
 .education>p{margin-top:0}
