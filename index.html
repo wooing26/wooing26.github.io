@@ -12,34 +12,41 @@
   <meta property="og:image" content="https://wooing26.github.io/assets/social.jpg">
   <meta property="og:url" content="https://wooing26.github.io/">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="style.css?v=smooth-1">
+  <link rel="stylesheet" href="style.css?v=motion-2">
+  <link rel="stylesheet" href="motion.css?v=motion-2">
 </head>
 <body>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
   <a class="skip" href="#main">본문으로 바로가기</a>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="박우영 포트폴리오 처음으로"><span class="brand-icon" aria-hidden="true">W.</span><span>PARK WOOYOUNG<small>GAME CLIENT DEVELOPER</small></span></a>
-    <nav aria-label="주요 메뉴"><a href="#work">프로젝트</a><a href="#experience">경력</a><a href="#about">소개</a><a class="nav-download" href="#downloads">PDF 다운로드 <span aria-hidden="true">↗</span></a></nav>
+    <nav aria-label="주요 메뉴"><a href="#work">프로젝트</a><a href="#motion-lab">모션 랩</a><a href="#experience">경력</a><a href="#about">소개</a><a class="nav-download" href="#downloads">PDF 다운로드 <span aria-hidden="true">↗</span></a></nav>
   </header>
 
   <main id="main">
     <section class="hero wrap" id="top" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow"><span class="status-dot"></span> UNITY / GAME &amp; VR / CLIENT ENGINEERING</p>
-        <h1 id="hero-title">플레이를 만드는<br><span>코드.</span><br>경험을 완성하는<br><span class="outline">설계.</span></h1>
+        <p class="hero-edition">PORTFOLIO / 2026 <span>PHYSICS → SYSTEMS → PLAY</span></p>
+        <h1 id="hero-title">플레이를 만드는<br><span>코드와 설계.</span></h1>
         <p class="hero-description">안녕하세요, 게임 클라이언트 개발자 <strong>박우영</strong>입니다.<br>물리학으로 직접 구현한 당구 시뮬레이션부터<br class="desktop-break"> 팀의 시스템 설계, AI를 활용한 게임 제작까지 이어왔습니다.</p>
         <div class="actions"><a class="button primary" href="#work">대표 프로젝트 보기 <span aria-hidden="true">↘</span></a><a class="text-link" href="downloads/park-wooyoung-resume.pdf" download="박우영_이력서.pdf">이력서 다운로드 <span aria-hidden="true">↓</span></a></div>
         <div class="hero-signature"><span>물리학적 사고를 코드로.</span><span>팀의 요구를 플레이로.</span></div>
       </div>
-      <div class="hero-visual" aria-label="실제 프로젝트 화면 모음">
+      <div class="hero-visual" aria-label="실제 프로젝트 화면과 궤도 모션 그래픽">
         <div class="visual-grid" aria-hidden="true"></div>
-        <div class="visual-topline"><span>SELECTED WORKS</span><span>2026 / VOL.01</span></div>
-        <div class="hero-word" aria-hidden="true">BUILD.<br>PLAY.<br>REFINE.</div>
-        <figure class="hero-phone phone-back hero-wide"><img src="assets/project-t.webp" width="1914" height="1086" alt="Project T의 파란 상호작용 범위와 캐릭터가 표시된 Unity 테스트 장면"><figcaption>PROJECT T <span>EDITOR</span></figcaption></figure><figure class="hero-phone hero-billiards"><img src="assets/billiards.webp" width="982" height="669" alt="Billiards의 당구대와 스핀 입력 UI 전체 플레이 화면"><figcaption>BILLIARDS <span>PHYSICS</span></figcaption></figure>
-        <figure class="hero-phone phone-front"><img src="assets/fighter-cover.webp" width="489" height="868" alt="복서와 조명이 강조된 Fighter Tap 타이틀 씬 미리보기"><figcaption>FIGHTER TAP <span>TITLE PREVIEW</span></figcaption></figure>
+        <div class="orbit-system" aria-hidden="true"><div class="orbit orbit-one"><i></i></div><div class="orbit orbit-two"><i></i></div><div class="orbit orbit-three"><i></i></div><span class="orbit-center">+</span></div>
+        <div class="visual-topline"><span><i class="status-dot"></i> IDEAS IN MOTION</span><span>W. / 026</span></div>
+        <div class="hero-word" aria-hidden="true">CODE.<br>PLAY.<br><span>REPEAT.</span></div>
+        <figure class="hero-phone hero-wide"><img src="assets/project-t.webp" width="1914" height="1086" alt="Project T의 파란 상호작용 범위와 캐릭터가 표시된 Unity 테스트 장면"><figcaption>02 / PROJECT T <span>SYSTEMS</span></figcaption></figure>
+        <figure class="hero-phone hero-billiards"><img src="assets/billiards.webp" width="982" height="669" alt="Billiards의 당구대와 스핀 입력 UI 전체 플레이 화면"><figcaption>01 / BILLIARDS <span>PHYSICS</span></figcaption></figure>
+        <figure class="hero-phone phone-front"><img src="assets/fighter-cover.webp" width="489" height="868" alt="복서와 조명이 강조된 Fighter Tap 타이틀 씬 미리보기"><figcaption>03 / FIGHTER TAP</figcaption></figure>
+        <div class="visual-foot"><span class="visual-cross" aria-hidden="true">✳</span><p>원리를 이해하고,<br>움직임으로 완성합니다.</p><a href="#motion-lab" aria-label="인터랙티브 모션 랩으로 이동">↘</a></div>
       </div>
+      <div class="hero-bottom"><span>FROM PHYSICS TO PLAY.</span><a href="#work">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a><button class="motion-toggle" type="button" aria-pressed="false" hidden>모션 일시정지 <span aria-hidden="true">Ⅱ</span></button></div>
     </section>
 
-    <div class="specialties" aria-label="핵심 전문 분야"><div class="wrap"><span>UNITY &amp; C#</span><i aria-hidden="true">✳</i><span>MULTIPLAYER</span><i aria-hidden="true">✳</i><span>GAME SYSTEMS</span><i aria-hidden="true">✳</i><span>EDITOR TOOLS</span><i aria-hidden="true">✳</i><span>AI WORKFLOW</span></div></div>
+    <div class="specialties" aria-label="핵심 전문 분야"><div class="marquee-track"><div class="marquee-group"><span>UNITY &amp; C#</span><i aria-hidden="true">✳</i><span>MULTIPLAYER</span><i aria-hidden="true">✳</i><span>GAME SYSTEMS</span><i aria-hidden="true">✳</i><span>EDITOR TOOLS</span><i aria-hidden="true">✳</i><span>AI WORKFLOW</span><i aria-hidden="true">✳</i></div></div></div>
 
     <section class="section wrap" id="work" aria-labelledby="work-title">
       <div class="section-heading"><div><p class="eyebrow">01 / SELECTED WORK</p><h2 id="work-title">코드가 플레이가 되는 과정<span class="accent">.</span></h2></div><p>무엇을 만들었는지,<br>어떤 판단을 했는지 함께 보여드립니다.</p></div>
@@ -47,6 +54,7 @@
 
       <div class="case-studies">
         <article class="case" id="billiards-detail">
+          <div class="case-cover"><div class="cover-grid" aria-hidden="true"></div><span class="cover-number" aria-hidden="true">01</span><span class="cover-kicker">VECTOR / COLLISION / SPIN</span><img src="assets/billiards.webp" width="982" height="669" loading="lazy" decoding="async" alt="Billiards 3 Ball의 당구대, 점수와 스핀 입력 화면"><div class="cover-caption"><span>PHYSICS INTO PLAY</span><button type="button" data-gallery="billiards" data-title="Billiards 3 Ball" aria-haspopup="dialog" aria-label="Billiards 3 Ball의 당구대, 점수와 스핀 입력 화면 이미지 모음 열기">↗</button></div></div>
           <div class="case-label"><span>CASE STUDY / 01</span><span>대학 캡스톤 / 후속 개인 개선</span></div>
           <div class="case-heading"><h3>Billiards 3 Ball<span>생성형 AI 없이, 수식을 움직임으로.</span></h3><span class="case-stack">Python · Pygame · NumPy · Vector Physics</span></div>
           <div class="case-body"><div><p class="case-intro">물리학 전공 지식을 게임으로 옮긴 3인 팀 당구 시뮬레이션입니다. PM과 주요 프로그래밍, 물리 이론 조사를 맡아 공의 이동·마찰·충돌·회전·스핀과 득점 판정을 구현했습니다. 팀 프로젝트 종료 후 메뉴·화면 크기 설정을 개인 작업으로 개선했습니다.</p><div class="flow" aria-label="물리 처리 흐름"><span>샷·스핀 입력</span><b aria-hidden="true">→</b><span>이동·충돌·회전</span><b aria-hidden="true">→</b><span>3쿠션 득점 판정</span></div></div><div class="case-metrics"><div><strong>2D + 3D</strong><span>위치·속도 + 스핀 벡터</span></div><div><strong>3</strong><span>공 쌍별 충돌 상태 관리</span></div></div></div>
@@ -54,6 +62,7 @@
           <details><summary>구현과 문제 해결 자세히 보기 <span aria-hidden="true">+</span></summary><div class="detail-content"><div><h4>물리학을 배열과 좌표계로</h4><p>위치·속도는 2차원, 스핀은 3차원 벡터로 관리했습니다. 구의 관성모멘트 I = (2/5)mr²와 내적·외적을 사용하고, 접촉점 속도 v + ω × r을 기준으로 벽 충돌 후 속도와 회전 상태를 갱신했습니다.</p></div><div><h4>붙어서 움직이는 공의 원인 추적</h4><p>충돌 후 겹침이 남은 다음 프레임에 충돌 응답이 반복되는 것을 확인했습니다. 공의 쌍마다 카운터를 두고 충돌 직후 3프레임 동안 재처리를 건너뛰어 반복 반응을 완화했습니다.</p></div><div><h4>각도보다 방향 벡터로</h4><p>arccos 변환의 범위 때문에 스핀 방향이 원하는 대로 나오지 않는 문제를 다뤘습니다. 정규화한 방향 벡터 성분으로 입력을 게임 공간의 스핀으로 변환해 방향을 일관되게 처리했습니다.</p></div><div><h4>샷의 시작과 종료를 분리</h4><p>목적구 접촉과 쿠션 횟수를 기록하고 모든 공이 멈춘 뒤 한 번만 점수·턴을 판정합니다. 이후 충돌 기록과 입력 상태를 초기화하고, 메뉴·플레이·설정의 실행 흐름을 모듈로 나눴습니다.</p></div><p class="scope-note">물리 수식과 코드를 직접 다룬 학습·구현 경험입니다. 충돌 프레임 건너뛰기는 반복 응답을 완화하는 방식이며, 정밀 물성이나 모든 속도에서의 충돌 안정성을 보장하지 않습니다.</p><a class="text-link" href="downloads/park-wooyoung-billiards.pdf" download="PygameBilliards_포트폴리오.pdf">Billiards 상세 PDF ↓</a><a class="text-link" href="https://github.com/wooing26/pygame_billiards" target="_blank" rel="noopener noreferrer">GitHub 소스 ↗</a></div></details>
         </article>
         <article class="case" id="project-t-detail">
+          <div class="case-cover"><div class="cover-grid" aria-hidden="true"></div><span class="cover-number" aria-hidden="true">02</span><span class="cover-kicker">DOMAIN / DATA / TOOLS</span><img src="assets/project-t.webp" width="1914" height="1086" loading="lazy" decoding="async" alt="Project T의 상호작용 범위를 확인하는 Unity Editor 테스트 장면"><div class="cover-caption"><span>SYSTEMS THAT CONNECT</span><button type="button" data-gallery="project-t" data-title="Project T" aria-haspopup="dialog" aria-label="Project T의 상호작용 범위를 확인하는 Unity Editor 테스트 장면 이미지 모음 열기">↗</button></div></div>
           <div class="case-label"><span>CASE STUDY / 02</span><span>2025.09 — 2026.02 / 재직 중 담당</span></div>
           <div class="case-heading"><h3>Project T<span>팀이 함께 확장할 수 있는 시스템으로.</span></h3><span class="case-stack">Unity · C# · UniTask · Google Sheets · GraphView</span></div>
           <div class="case-body"><div><p class="case-intro">MIDO Studio 창립 멤버로 기획 1명, 아트 1명, 클라이언트 3명과 개발한 회사 프로젝트입니다. 아웃게임 데이터 구조, 인벤토리·상호작용·입력과 AI 제작 도구를 구현하고, 초기 협업 환경과 자동 빌드 흐름을 구성했습니다.</p><div class="flow" aria-label="아웃게임 계층 구조"><span>Domain</span><b aria-hidden="true">→</b><span>Repository</span><b aria-hidden="true">→</b><span>Manager / UI</span></div></div><div class="case-metrics"><div><strong>4</strong><span>책임을 나눈 아웃게임 계층</span></div><div><strong>5</strong><span>기획·아트·클라이언트 팀원</span></div></div></div>
@@ -61,6 +70,7 @@
           <details><summary>구현과 문제 해결 자세히 보기 <span aria-hidden="true">+</span></summary><div class="detail-content"><div><h4>데이터와 화면의 책임 분리</h4><p>Domain–Repository–Manager–UI로 계층을 나누고 PlayerDataStore의 로드와 RuntimeManager의 변경·저장 흐름을 구성했습니다. Dirty Flag로 저장 필요 여부를 관리하고, C# 이벤트로 필요한 UI만 변경을 구독하도록 했습니다.</p></div><div><h4>기획 데이터에서 인벤토리까지</h4><p>Google Sheets 데이터를 POCO로 변환해 사용했습니다. 장비·소비재·재료 구조, 정렬·필터·합치기를 구현하고 인게임에 가져갈 데이터는 Snapshot으로 전달했습니다.</p></div><div><h4>조합 가능한 상호작용과 AI 도구</h4><p>IInteractable과 독립 컴포넌트로 Hold·Throw·Give 행동을 조합했습니다. GraphView 기반 Behavior Tree 에디터와 활성 노드 하이라이트를 개발하고 UniTask로 Tick 주기와 비동기 흐름을 구성했습니다.</p></div><div><h4>실행 비용과 팀의 작업 흐름</h4><p>Profiler·Memory Profiler로 병목과 GC Alloc을 점검하고 풀링·레이캐스트 분산·Canvas 분리를 적용했습니다. Player/UI 입력 분리, PC·모바일 입력 추상화와 Jenkins 플랫폼별 예약 빌드 환경도 구성했습니다.</p></div><p class="scope-note">회사 프로젝트의 공개 가능한 담당 시스템만 소개합니다. 대표 이미지는 상호작용 테스트용 Unity Editor 장면이며 완성 게임의 출시 화면이 아닙니다.</p><a class="text-link" href="downloads/park-wooyoung-portfolio.pdf" download="박우영_게임개발자_포트폴리오.pdf">Project T 수록 포트폴리오 PDF ↓</a></div></details>
         </article>
         <article class="case" id="fighter-detail">
+          <div class="case-cover portrait-cover"><div class="cover-grid" aria-hidden="true"></div><span class="cover-number" aria-hidden="true">03</span><span class="cover-kicker">GAMEPLAY / NETWORK / FEEDBACK</span><img src="assets/fighter-hit.webp" width="489" height="868" loading="lazy" decoding="async" alt="Fighter Tap의 샌드백 타격 효과와 게임 HUD 검증 화면"><div class="cover-caption"><span>FEEL EVERY INPUT</span><button type="button" data-gallery="fighter" data-title="Fighter Tap" aria-haspopup="dialog" aria-label="Fighter Tap의 샌드백 타격 효과와 게임 HUD 검증 화면 이미지 모음 열기">↗</button></div></div>
           <div class="case-label"><span>CASE STUDY / 03</span><span>2026.10 — 진행 중</span></div>
           <div class="case-heading"><h3>Fighter Tap<span>규칙의 안정성과 타격의 반응을 함께.</span></h3><span class="case-stack">Unity 6 · FishNet · UniTask · DOTween · URP</span></div>
           <div class="case-body"><div><p class="case-intro">훈련과 스탯 투자, NPC 도전과 LAN 대전을 연결하는 1인 개발 게임입니다. 기획·클라이언트부터 AI 아트의 에셋화, 3D 환경·물리 반응·연출 통합을 담당했습니다.</p><div class="flow" aria-label="게임 흐름"><span>훈련·성장</span><b aria-hidden="true">→</b><span>NPC / LAN 대전</span><b aria-hidden="true">→</b><span>보상·해금</span></div></div><div class="case-metrics"><div><strong>503 <em>→</em> 15</strong><span>체육관 렌더러 수</span></div><div><strong>94.9<em>%</em></strong><span>샌드백 삼각형 감소</span></div></div></div>
@@ -69,6 +79,22 @@
         </article>
       </div>
       <div class="portfolio-callout"><p><strong>코드의 구조부터 작업 전후 화면까지.</strong><span>Billiards 개별 PDF, Project T 수록 포트폴리오, Fighter Tap의 AI 활용 자료를 다운로드할 수 있습니다.</span></p><a class="button secondary" href="downloads/park-wooyoung-gameclient-ai.pdf" download="박우영_GameClient_AI_Portfolio.pdf">Fighter Tap · AI 활용 PDF <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section class="motion-lab section wrap" id="motion-lab" aria-labelledby="lab-title">
+      <div class="section-heading"><div><p class="eyebrow">INTERLUDE / A LITTLE PLAY</p><h2 id="lab-title">생각이 움직이는 순간<span class="accent">.</span></h2></div><p>직접 눌러 보고, 흐름을 따라가 보세요.<br>제가 다루는 문제들을 작은 모션으로 풀었습니다.</p></div>
+      <div class="lab-grid">
+        <div class="physics-playground">
+          <div class="lab-topline"><span><i class="status-dot"></i> 01 / PHYSICS</span><span>v + ω × r</span></div>
+          <canvas id="physics-canvas" width="720" height="440" aria-label="세 공의 이동 궤적을 보여주는 장식용 물리 모션. 아래 버튼으로 새 샷을 실행할 수 있습니다."></canvas>
+          <div class="lab-bottom"><div><h3>작은 입력, 새로운 궤적.</h3><p>화면을 누르면 그 방향으로 공이 움직입니다.</p></div><button id="physics-shot" type="button" hidden>다시 샷 <span aria-hidden="true">↗</span></button></div>
+          <noscript><p class="lab-fallback">JavaScript를 켜면 공의 움직임을 직접 확인할 수 있습니다.</p></noscript>
+        </div>
+        <div class="systems-playground"><div class="lab-topline"><span>02 / SYSTEM DESIGN</span><span>EVENT FLOW</span></div>
+          <div class="system-flow" aria-label="데이터가 도메인에서 UI로 전달되는 개념 흐름"><div class="system-node"><span>01</span><strong>Domain</strong><small>게임의 규칙</small></div><div class="system-node"><span>02</span><strong>Repository</strong><small>데이터의 연결</small></div><div class="system-node"><span>03</span><strong>Manager</strong><small>상태의 변화</small></div><div class="system-node"><span>04</span><strong>UI</strong><small>플레이어의 경험</small></div></div>
+          <div class="lab-bottom"><div><h3>각자의 책임, 하나의 흐름.</h3><p>Project T의 계층 구조에서 출발한 모션입니다.</p></div><a href="#project-t-detail" aria-label="Project T 시스템 설계 살펴보기">↗</a></div>
+        </div>
+      </div><p class="lab-note">포트폴리오의 물리·시스템 주제를 웹으로 재해석한 개념 모션입니다. 실제 게임의 실행 화면과 구현 상세는 프로젝트에서 확인할 수 있습니다.</p>
     </section>
 
     <section class="experience-section" id="experience" aria-labelledby="experience-title"><div class="wrap section">
@@ -95,6 +121,7 @@
 <template id="gallery-lastflame"><div class="case-gallery single"><figure><a href="assets/lastflame.webp" target="_blank" rel="noopener noreferrer" aria-label="Last Flame Keepers의 건물과 불 영역 플레이 화면 확대"><img src="assets/previews/lastflame.webp" width="640" height="358" loading="lazy" alt="Last Flame Keepers의 건물과 불 영역 플레이 화면"></a><figcaption>GAME SCREEN / 건물과 불의 영향</figcaption></figure></div><div class="other-links"><a href="https://youtu.be/-JJ-dISisqs" target="_blank" rel="noopener noreferrer">플레이 영상 ↗</a></div></template>
 <template id="gallery-skyfall"><div class="case-gallery single"><figure><a href="assets/skyfall.webp" target="_blank" rel="noopener noreferrer" aria-label="SKYFALL의 낙하 전투와 보스 시각 효과 확대"><img src="assets/previews/skyfall.webp" width="640" height="313" loading="lazy" alt="SKYFALL의 낙하 전투와 보스 시각 효과"></a><figcaption>GAME SCREEN / 낙하 전투와 VFX</figcaption></figure></div><div class="other-links"><a href="https://github.com/Project-FallTPS/SkyFall-Resistance_Client" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://youtu.be/eVyqCoeKlqA" target="_blank" rel="noopener noreferrer">플레이 영상 ↗</a></div></template>
 <template id="gallery-potion"><div class="case-gallery single"><figure><a href="assets/potion.webp" target="_blank" rel="noopener noreferrer" aria-label="Potion Maker의 협동 플레이와 상점 화면 확대"><img src="assets/previews/potion.webp" width="640" height="314" loading="lazy" alt="Potion Maker의 협동 플레이와 상점 화면"></a><figcaption>PLAY / 협동 시뮬레이션</figcaption></figure></div><div class="other-links"><a href="https://github.com/Project-PotionMaker/PotionMaker" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://youtu.be/wG9l-TZsLJs" target="_blank" rel="noopener noreferrer">플레이 영상 ↗</a></div></template>
-<script src="gallery.js?v=smooth-1" defer></script>
+<script src="gallery.js?v=motion-2" defer></script>
+<script src="motion.js?v=motion-2" defer></script>
 </body>
 </html>
