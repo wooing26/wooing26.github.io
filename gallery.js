@@ -7,6 +7,7 @@ const hint = viewer.querySelector('.viewer-hint');
 let opener;
 let request = 0;
 let activeGallery;
+let downloadNavigation = false;
 const galleries = new Map();
 
 // Use the existing project video link as the single source of truth.
@@ -133,6 +134,13 @@ mediaControls.addEventListener('click', (event) => {
 
 viewer.querySelector('.viewer-close').addEventListener('click', () => viewer.close());
 viewer.addEventListener('click', (event) => {
+  const downloadLink = event.target.closest('a[href="#downloads"]');
+  if (downloadLink) {
+    event.preventDefault();
+    downloadNavigation = true;
+    viewer.close();
+    return;
+  }
   if (event.target !== viewer) return;
   const rect = viewer.getBoundingClientRect();
   if (event.clientX < rect.left || event.clientX > rect.right ||
@@ -142,5 +150,13 @@ viewer.addEventListener('close', () => {
   request++;
   stopVideo();
   activeGallery = undefined;
+  if (downloadNavigation) {
+    downloadNavigation = false;
+    window.location.hash = 'downloads';
+    const downloads = document.querySelector('#downloads');
+    downloads.focus({ preventScroll: true });
+    downloads.scrollIntoView({ block: 'start' });
+    return;
+  }
   opener?.focus({ preventScroll: true });
 });

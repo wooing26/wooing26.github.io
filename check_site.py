@@ -55,6 +55,10 @@ if __name__ == "__main__":
     assert source.count('<template id="gallery-') == 9
     assert 'class="other-image"' not in source
     downloads = source.split('<section class="downloads-section"', 1)[1].split("</section>", 1)[0]
+    outside_downloads = source.split('<section class="downloads-section"', 1)[0] + source.split('<section class="downloads-section"', 1)[1].split('</section>', 1)[1]
+    assert not re.search(r'href="downloads/[^\"]+\.pdf"|\bdownload=', outside_downloads), "PDF downloads must remain in the final downloads section, including gallery templates"
+    assert len(parser.downloads) == 5, "Each PDF must have exactly one download link"
+    assert downloads.count('class="document-projects"') == 5, "Every document needs a project list"
     assert "<img" not in downloads
     assert all(image.get("alt") for image in parser.images), "Missing image descriptions"
     assert 'lang="ko"' in source and 'name="viewport"' in source
