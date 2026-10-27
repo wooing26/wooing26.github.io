@@ -179,6 +179,19 @@ nav a[aria-current]::after{content:'';position:absolute;bottom:-7px;left:0;right
 .contact-arrow{transition:background .3s,transform .3s}
 .contact-arrow:hover{transform:rotate(45deg)}
 
+/* Footage opens first when a project has an existing YouTube video link. */
+.media-switcher{display:flex;gap:8px;margin-top:24px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+.media-switcher button{padding:9px 17px;border:1px solid #586947;background:transparent;color:#bdc9ac;font-size:12px}
+.media-switcher button[aria-pressed='true']{background:var(--lime);border-color:var(--lime);color:#1c2615}
+.media-switcher button:hover{border-color:var(--lime)}
+#viewer-video{margin-top:24px}
+.project-video{display:block;width:min(100%,max(200px,calc((85dvh - 310px)*16/9)));aspect-ratio:16/9;min-height:200px;margin-inline:auto;border:1px solid #435734;background:#0b1009}
+.video-note{margin-top:16px;font-size:11px;color:#b3c1a2;line-height:1.9}
+.video-external{display:inline-block;padding-block:4px;color:var(--lime);border-bottom:1px solid #738b55}
+.card-open.has-video>span{display:grid;place-items:center;width:30px;height:30px;border:1px solid #879c65;border-radius:50%;font-size:11px;color:var(--lime)}
+.card-open.has-video:hover>span{transform:scale(1.08)}
+@media(max-width:600px){.media-switcher{margin-top:20px}.media-switcher button{padding:10px 14px;font-size:11px}.video-note{font-size:10px}.project-video{min-height:200px}}
+
 @keyframes orbit-spin{to{transform:rotate(360deg)}}
 @keyframes image-drift{0%,100%{transform:translateY(0) rotate(var(--angle))}50%{transform:translateY(-10px) rotate(calc(var(--angle) + 2deg))}}
 @keyframes scroll-nudge{0%,100%{transform:translateY(-2px)}50%{transform:translateY(4px)}}
